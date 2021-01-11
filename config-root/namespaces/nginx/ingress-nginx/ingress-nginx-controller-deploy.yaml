@@ -21,7 +21,7 @@ spec:
       app.kubernetes.io/name: ingress-nginx
       app.kubernetes.io/instance: nginx-ingress
       app.kubernetes.io/component: controller
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 10
   minReadySeconds: 0
   template:
@@ -106,7 +106,7 @@ spec:
               readOnly: true
           resources:
             requests:
-              cpu: 50m
+              cpu: 100m
               memory: 90Mi
       nodeSelector:
         kubernetes.io/os: linux
